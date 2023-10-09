@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cara</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="rostro">
+        <div class="linea-de-los-ojos">
+            <div class="ojo ojo-1" id="ojo-1" >👁</div>
+            <div class="ojo ojo-2" id="ojo-2">👁</div>
+        </div>
+        <div class="nariz">👃</div>
+        <div class="boca" id="boca">👄</div>
+    </div>
+    <script>
+
+        const start=()=>{
+            document.getElementById("ojo-1").addEventListener("click",()=>ginar("ojo-1"))
+            document.getElementById("ojo-2").addEventListener("click",()=>ginar("ojo-2"))
+            document.getElementById("boca").addEventListener("click",besar)
+            
+        }
+        const besar =()=>{
+            const const_boca = document.getElementById("boca")
+            const_boca.innerText = "💋"
+            setTimeout(abrir_boca,1000)
+        }
+        const abrir_boca =()=>{
+            const const_boca_1 = document.getElementById("boca")
+            const_boca_1.innerText = "👄"
+        }
+        const ginar =(ojo_giñado)=>{
+            const const_ojo = document.getElementById(ojo_giñado)
+            const_ojo.innerText = "❤"
+            setTimeout(()=>abrir_ojo(ojo_giñado),1000)
+        }
+        const abrir_ojo =(ojo_giñado)=>{
+            const const_ojo_1 = document.getElementById(ojo_giñado)
+            const_ojo_1.innerText = "👁"
+        }
+        window.onload = start;
+
+    </script>
+</body>
+</html>
